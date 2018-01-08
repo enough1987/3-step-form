@@ -19,7 +19,6 @@ export class CvCreateStep3Component extends BaseCvCreateStep {
     super(store, router, fb);
   }
 
-
   protected createForm() {
     this.form = this.fb.group({
       wantedPosition: this.fb.group({
