@@ -1,0 +1,71 @@
+
+<form class="w-50" [formGroup]="form" >
+  <h3> Please say about yourself: </h3>
+
+  <div class="form-group">
+    <label for="inputCity">City</label>
+    <select id="inputCity" class="form-control"
+      formControlName="city" >
+      <option selected>Kiev</option>
+      <option>Lviv</option>
+      <option>Odessa</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPhone">Phone</label>
+    <input type="number" class="form-control" id="inputPhone" placeholder="Phone"
+           formControlName="phone" >
+  </div>
+
+  <div class="form-row" formGroupName="birthday">
+    <div class="form-group col-md-6">
+      <label for="inputBirthdayDay">Day</label>
+      <input type="text" class="form-control" id="inputBirthdayDay"
+             formControlName="day" >
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputBirthdayMonth">Month</label>
+      <select id="inputBirthdayMonth" class="form-control"
+              formControlName="month" >
+        <option selected>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputBirthdayYear">Year</label>
+      <input type="text" class="form-control" id="inputBirthdayYear"
+             formControlName="year" >
+    </div>
+  </div>
+
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Sex</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sex" id="sexRadios1" value="man" checked
+                 formControlName="sex" >
+          <label class="form-check-label" for="sexRadios1">
+            Man
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sex" id="sexRadios2" value="woman"
+                 formControlName="sex" >
+          <label class="form-check-label" for="sexRadios2">
+            Woman
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <button type="button" class="btn btn-primary"
+    (click)="next('./cv/create/2')"
+  >Next step </button>
+
+</form>
+
