@@ -2,7 +2,7 @@ import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 import 'rxjs/add/operator/filter';
 import {Store} from '@ngrx/store';
-import {newCvActions} from '../../store/reducers/newCvReducer';
+import {newCvActions} from '../../store/reducers/new-cv-reducer';
 import {AppState} from '../../store/app-store.module';
 
 @Component({
@@ -18,8 +18,7 @@ export class CvCreateComponent implements OnDestroy {
 
       router.events
         .filter((event) => event instanceof NavigationEnd)
-        .forEach((event) => {
-          console.log( event );
+        .forEach(() => {
           this.step = +this.activatedRoute.snapshot.params.step;
       });
 

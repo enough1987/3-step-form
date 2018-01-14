@@ -11,7 +11,8 @@ import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AppStoreModule} from './store/app-store.module';
 import {HttpClientModule} from '@angular/common/http';
-import {CvCollectionResolver} from './services/cvCollection.service';
+import {CvCollectionResolver} from './guards/cv-collection.resolver';
+import {NewCvResolver} from './guards/new-cv.resolver';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {CvCollectionResolver} from './services/cvCollection.service';
     RoutingModule
   ],
   providers: [
-    CvCollectionResolver
+    CvCollectionResolver,
+    NewCvResolver
   ],
   bootstrap: [AppRootComponent]
 })

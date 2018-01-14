@@ -13,32 +13,6 @@ class Action {
   payload: CvModel;
 }
 
-const defaultState: Array<CvModel> = [{
-  city: 'Kiev',
-  phone: '00000000000',
-  birthday: {
-    day: '',
-    month: '',
-    year: '',
-  },
-  sex: 'Men',
-  zeroJobExperience: false,
-  lastJob: {
-    companyName: 'Apple',
-    companyIndustry: 'Rocket Sience',
-    position: 'Dev',
-    period: {
-      from: { month: '', year: ''},
-      to: { month: '', year: ''},
-      forNow: false
-    }
-  },
-  wantedPosition: {
-    position: '111',
-    section: ['IT']
-  }
-}];
-
 export function cvCollectionReducer(state: Array<CvModel>, action: Action) {
   switch (action.type) {
     case cvCollectionActions.ADD:

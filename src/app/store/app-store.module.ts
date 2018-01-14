@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {TestEffects} from './effects/test';
-import {newCvReducer} from './reducers/newCvReducer';
-import {cvCollectionReducer} from './reducers/cvCollectionReducer';
+import {newCvReducer} from './reducers/new-cv-reducer';
+import {cvCollectionReducer} from './reducers/cv-collection-reducer';
 import {CvModel} from './app-store.dictionary';
 
 export class AppState {

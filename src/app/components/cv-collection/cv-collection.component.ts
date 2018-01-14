@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {Router} from '@angular/router';
 import {CvModel} from '../../store/app-store.dictionary';
-import {cvCollectionActions} from '../../store/reducers/cvCollectionReducer';
+import {cvCollectionActions} from '../../store/reducers/cv-collection-reducer';
 import {AppState} from '../../store/app-store.module';
 
 @Component({

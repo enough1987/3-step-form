@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {CvModel} from '../../store/app-store.dictionary';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {Error} from 'tslint/lib/error';
-import {newCvActions} from '../../store/reducers/newCvReducer';
+import {newCvActions} from '../../store/reducers/new-cv-reducer';
 import {AppState} from '../../store/app-store.module';
 
 export abstract class BaseCvCreateStep {

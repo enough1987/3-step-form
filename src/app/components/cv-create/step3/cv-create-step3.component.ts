@@ -3,7 +3,7 @@ import {BaseCvCreateStep} from '../base-cv-create-step';
 import {Router} from '@angular/router';
 import {Store} from '@ngrx/store';
 import {FormBuilder, Validators} from '@angular/forms';
-import {cvCollectionActions} from '../../../store/reducers/cvCollectionReducer';
+import {cvCollectionActions} from '../../../store/reducers/cv-collection-reducer';
 import {AppState} from '../../../store/app-store.module';
 
 

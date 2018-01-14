@@ -1,0 +1,31 @@
+{
+  "city": "Kiev",
+  "phone": "",
+  "birthday": {
+    "day": "",
+    "month": "",
+    "year": ""
+  },
+  "sex": "man",
+  "zeroJobExperience": false,
+  "lastJob": {
+    "companyName": "",
+    "companyIndustry": "",
+    "position": "",
+    "period": {
+      "from": {
+        "month": "",
+        "year": ""
+      },
+      "to": {
+        "month": "",
+        "year": ""
+      },
+      "forNow": false
+    }
+  },
+  "wantedPosition": {
+    "position": "",
+    "section": []
+  }
+}

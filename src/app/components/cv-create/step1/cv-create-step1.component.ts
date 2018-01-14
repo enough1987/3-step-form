@@ -17,6 +17,7 @@ export class CvCreateStep1Component extends BaseCvCreateStep {
   }
 
   protected createForm() {
+    console.log(this.newCv);
     this.form = this.fb.group({
       city: [this.newCv.city, Validators.required ],
       phone: [this.newCv.phone, Validators.required ],

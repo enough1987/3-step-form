@@ -2,7 +2,8 @@ import {NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CvCreateComponent} from './components/cv-create/cv-create.component';
 import {CvCollectionComponent} from './components/cv-collection/cv-collection.component';
-import {CvCollectionResolver} from './services/cvCollection.service';
+import {CvCollectionResolver} from './guards/cv-collection.resolver';
+import {NewCvResolver} from './guards/new-cv.resolver';
 
 
 const appRoutes: Routes = [
@@ -15,7 +16,10 @@ const appRoutes: Routes = [
   },
   {
     path: 'cv/create/:step',
-    component: CvCreateComponent
+    component: CvCreateComponent,
+    resolve: {
+      data: NewCvResolver
+    }
   },
   { path: '**', redirectTo: '/' }
 ];
