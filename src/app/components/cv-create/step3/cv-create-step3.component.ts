@@ -2,9 +2,9 @@ import {Component} from '@angular/core';
 import {BaseCvCreateStep} from '../base-cv-create-step';
 import {Router} from '@angular/router';
 import {Store} from '@ngrx/store';
-import {AppState} from '../../../store/app.store';
 import {FormBuilder, Validators} from '@angular/forms';
 import {cvCollectionActions} from '../../../store/reducers/cvCollectionReducer';
+import {AppState} from '../../../store/app-store.module';
 
 
 @Component({

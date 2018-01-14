@@ -1,12 +1,10 @@
-
-import {AppState} from '../../store/app.store';
 import {Store} from '@ngrx/store';
 import {Router} from '@angular/router';
-import {CvModel} from '../../store/models';
+import {CvModel} from '../../store/app-store.dictionary';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {Error} from 'tslint/lib/error';
 import {newCvActions} from '../../store/reducers/newCvReducer';
-
+import {AppState} from '../../store/app-store.module';
 
 export abstract class BaseCvCreateStep {
 

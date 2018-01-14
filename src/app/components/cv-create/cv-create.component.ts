@@ -2,9 +2,8 @@ import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 import 'rxjs/add/operator/filter';
 import {Store} from '@ngrx/store';
-import {AppState} from '../../store/app.store';
 import {newCvActions} from '../../store/reducers/newCvReducer';
-
+import {AppState} from '../../store/app-store.module';
 
 @Component({
   selector: 'app-create-cv',

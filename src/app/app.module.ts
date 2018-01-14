@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRootComponent} from './components/app-root/app-root.component';
-import {StoreModule} from '@ngrx/store';
 import {RoutingModule} from './routing.module';
 import {CvCreateComponent} from './components/cv-create/cv-create.component';
-import {cvCollectionReducer} from './store/reducers/cvCollectionReducer';
-import {newCvReducer} from './store/reducers/newCvReducer';
 import {CvCollectionComponent} from './components/cv-collection/cv-collection.component';
 import {CvCreateStep1Component} from './components/cv-create/step1/cv-create-step1.component';
 import {CvCreateStep2Component} from './components/cv-create/step2/cv-create-step2.component';
 import {CvCreateStep3Component} from './components/cv-create/step3/cv-create-step3.component';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AppStoreModule} from './store/app-store.module';
+import {HttpClientModule} from '@angular/common/http';
+import {CvCollectionResolver} from './services/cvCollection.service';
 
 
 @NgModule({
@@ -26,14 +26,14 @@ import {ReactiveFormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     RouterModule,
+    HttpClientModule,
     ReactiveFormsModule,
-    RoutingModule,
-    StoreModule.forRoot({
-      cvCollection: cvCollectionReducer,
-      newCv: newCvReducer
-    })
+    AppStoreModule,
+    RoutingModule
   ],
-  providers: [],
+  providers: [
+    CvCollectionResolver
+  ],
   bootstrap: [AppRootComponent]
 })
 export class AppModule { }

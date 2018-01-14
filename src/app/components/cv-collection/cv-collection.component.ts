@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {Router} from '@angular/router';
-import {AppState} from '../../store/app.store';
-import {CvModel} from '../../store/models';
-
+import {CvModel} from '../../store/app-store.dictionary';
+import {cvCollectionActions} from '../../store/reducers/cvCollectionReducer';
+import {AppState} from '../../store/app-store.module';
 
 @Component({
   selector: 'app-create-cv',
@@ -21,7 +21,7 @@ export class CvCollectionComponent {
   }
 
   logCV(cv) {
-    console.log( cv );
+    this.store.dispatch({ type: cvCollectionActions.TEST, payload: cv });
   }
 
   navTocreateNew() {

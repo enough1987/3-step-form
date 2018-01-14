@@ -1,4 +1,4 @@
-import {CvModel} from '../models';
+import {CvModel} from '../app-store.dictionary';
 
 
 export enum newCvActions {
